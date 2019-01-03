@@ -38,14 +38,14 @@ class StartRecordingVC: UIViewController, AVAudioRecorderDelegate {
             startRecording()
         } else{
             stopRecording()
-            performSegue(withIdentifier: Constats.Playback_segue, sender: sender)
+            //performSegue(withIdentifier: Constats.Playback_segue, sender: sender)
         }
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let playbackVC = segue.destination as? PlaybackVC {
-            playbackVC.recordedAudio = audioRecorder
+            playbackVC.recordedAudio = sender as? URL
         }
     }
     
@@ -73,7 +73,11 @@ class StartRecordingVC: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-            
+        if flag {
+            performSegue(withIdentifier: Constats.Playback_segue, sender: audioRecorder.url)
+        } else {
+            print("Recording was not successful")
+        }
     }
 
 }
