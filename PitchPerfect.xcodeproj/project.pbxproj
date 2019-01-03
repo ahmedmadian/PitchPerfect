@@ -13,6 +13,7 @@
 		1E12843921D90E8900E48C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E12843821D90E8900E48C77 /* Assets.xcassets */; };
 		1E12843C21D90E8900E48C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E12843A21D90E8900E48C77 /* LaunchScreen.storyboard */; };
 		1E12844721D916A500E48C77 /* Constats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E12844621D916A500E48C77 /* Constats.swift */; };
+		1E2CACD921DE5164008880A7 /* PlaybackVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CACD821DE5164008880A7 /* PlaybackVCExtension.swift */; };
 		1EDB105C21DA459300F1FDFA /* PlaybackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB105B21DA459300F1FDFA /* PlaybackVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		1E12843B21D90E8900E48C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E12843D21D90E8900E48C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E12844621D916A500E48C77 /* Constats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constats.swift; sourceTree = "<group>"; };
+		1E2CACD821DE5164008880A7 /* PlaybackVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackVCExtension.swift; sourceTree = "<group>"; };
 		1EDB105B21DA459300F1FDFA /* PlaybackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 		1E12843021D90E8800E48C77 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				1E2CACD221DE4DD3008880A7 /* Extensions */,
 				1E12844521D9160A00E48C77 /* Utilites */,
 				1E12844421D90EFF00E48C77 /* Controller */,
 				1E12844321D90ED100E48C77 /* Supporting Files */,
@@ -92,6 +95,14 @@
 				1E12844621D916A500E48C77 /* Constats.swift */,
 			);
 			path = Utilites;
+			sourceTree = "<group>";
+		};
+		1E2CACD221DE4DD3008880A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CACD821DE5164008880A7 /* PlaybackVCExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E2CACD921DE5164008880A7 /* PlaybackVCExtension.swift in Sources */,
 				1EDB105C21DA459300F1FDFA /* PlaybackVC.swift in Sources */,
 				1E12843421D90E8800E48C77 /* StartRecordingVC.swift in Sources */,
 				1E12843221D90E8800E48C77 /* AppDelegate.swift in Sources */,

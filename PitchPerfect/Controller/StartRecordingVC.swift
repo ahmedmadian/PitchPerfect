@@ -45,7 +45,7 @@ class StartRecordingVC: UIViewController, AVAudioRecorderDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let playbackVC = segue.destination as? PlaybackVC {
-            playbackVC.recordedAudio = sender as? URL
+            playbackVC.recordedAudioURL = sender as? URL
         }
     }
     
