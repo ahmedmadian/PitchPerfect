@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class StartRecordingVC: UIViewController {
+class StartRecordingVC: UIViewController, AVAudioRecorderDelegate {
 
     //Outlets
     @IBOutlet weak var RecordingLabel:UILabel!
@@ -60,6 +60,7 @@ class StartRecordingVC: UIViewController {
         let session  = AVAudioSession.sharedInstance()
         try! session.setCategory( .playAndRecord, mode: .default, options: .defaultToSpeaker)
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -69,6 +70,10 @@ class StartRecordingVC: UIViewController {
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
+    }
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+            
     }
 
 }
